@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen de Java</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Examen de Java</h1>
+    <form id="quizForm">
+      <label for="name">Nombre Completo:</label>
+      <input type="text" id="name" placeholder="Ingrese su nombre completo" required><br>
+
+      <!-- Pregunta 1 -->
+      <div class="question" id="question1">
+        <p>¿Cómo se declara una variable en Java?</p>
+        <label><input type="radio" name="q1" value="int"> int</label><br>
+        <label><input type="radio" name="q1" value="let"> let</label><br>
+        <label><input type="radio" name="q1" value="var"> var</label><br>
+        <label><input type="radio" name="q1" value="declare"> declare</label><br>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="question" id="question2">
+        <p>¿Cómo se define una clase en Java?</p>
+        <label><input type="radio" name="q2" value="class MyClass {}"> class MyClass {}</label><br>
+        <label><input type="radio" name="q2" value="define class MyClass {}"> define class MyClass {}</label><br>
+        <label><input type="radio" name="q2" value="MyClass = class {}"> MyClass = class {}</label><br>
+        <label><input type="radio" name="q2" value="class: MyClass {}"> class: MyClass {}</label><br>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="question" id="question3">
+        <p>¿Qué palabra clave se usa para crear un objeto en Java?</p>
+        <label><input type="radio" name="q3" value="new"> new</label><br>
+        <label><input type="radio" name="q3" value="object"> object</label><br>
+        <label><input type="radio" name="q3" value="class"> class</label><br>
+        <label><input type="radio" name="q3" value="create"> create</label><br>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="question" id="question4">
+        <p>¿Cómo se define un método en Java?</p>
+        <label><input type="radio" name="q4" value="public void metodo() {}"> public void metodo() {}</label><br>
+        <label><input type="radio" name="q4" value="void metodo() {}"> void metodo() {}</label><br>
+        <label><input type="radio" name="q4" value="method void metodo() {}"> method void metodo() {}</label><br>
+        <label><input type="radio" name="q4" value="void function metodo() {}"> void function metodo() {}</label><br>
+      </div>
+
+      <!-- Pregunta 5 -->
+      <div class="question" id="question5">
+        <p>¿Cuál de las siguientes es una forma correcta de declarar un array en Java?</p>
+        <label><input type="radio" name="q5" value="int[] arr = new int[5];"> int[] arr = new int[5];</label><br>
+        <label><input type="radio" name="q5" value="int arr[] = {1, 2, 3};"> int arr[] = {1, 2, 3};</label><br>
+        <label><input type="radio" name="q5" value="int arr = new int[5];"> int arr = new int[5];</label><br>
+        <label><input type="radio" name="q5" value="array arr[] = {1, 2, 3};"> array arr[] = {1, 2, 3};</label><br>
+      </div>
+
+      <!-- Pregunta 6 -->
+      <div class="question" id="question6">
+        <p>¿Qué palabra clave se utiliza para heredar en Java?</p>
+        <label><input type="radio" name="q6" value="extends"> extends</label><br>
+        <label><input type="radio" name="q6" value="inherits"> inherits</label><br>
+        <label><input type="radio" name="q6" value="implements"> implements</label><br>
+        <label><input type="radio" name="q6" value="super"> super</label><br>
+      </div>
+
+      <!-- Pregunta 7 -->
+      <div class="question" id="question7">
+        <p>¿Cómo se declara una constante en Java?</p>
+        <label><input type="radio" name="q7" value="final"> final</label><br>
+        <label><input type="radio" name="q7" value="constant"> constant</label><br>
+        <label><input type="radio" name="q7" value="const"> const</label><br>
+        <label><input type="radio" name="q7" value="immutable"> immutable</label><br>
+      </div>
+
+      <!-- Pregunta 8 -->
+      <div class="question" id="question8">
+        <p>¿Qué tipo de datos es el valor de "null" en Java?</p>
+        <label><input type="radio" name="q8" value="object"> object</label><br>
+        <label><input type="radio" name="q8" value="integer"> integer</label><br>
+        <label><input type="radio" name="q8" value="boolean"> boolean</label><br>
+        <label><input type="radio" name="q8" value="null"> null</label><br>
+      </div>
+
+      <!-- Pregunta 9 -->
+      <div class="question" id="question9">
+        <p>¿Cómo se escribe un comentario en una línea en Java?</p>
+        <label><input type="radio" name="q9" value="// comentario"> // comentario</label><br>
+        <label><input type="radio" name="q9" value="/* comentario */"> /* comentario */</label><br>
+        <label><input type="radio" name="q9" value="# comentario"> # comentario</label><br>
+        <label><input type="radio" name="q9" value="<!-- comentario -->"> <!-- comentario --></label><br>
+      </div>
+
+      <!-- Pregunta 10 -->
+      <div class="question" id="question10">
+        <p>¿Cómo se maneja una excepción en Java?</p>
+        <label><input type="radio" name="q10" value="try-catch"> try-catch</label><br>
+        <label><input type="radio" name="q10" value="catch-finally"> catch-finally</label><br>
+        <label><input type="radio" name="q10" value="exception"> exception</label><br>
+        <label><input type="radio" name="q10" value="throw-try"> throw-try</label><br>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">Ver Resultados y Generar PDF</button>
+    </form>
+
+    <div id="results" style="display: none;">
+      <h2>Resultados</h2>
+      <p id="score"></p>
+      <button id="downloadPdf">Descargar PDF</button>
+    </div>
+  </div>
+
+  <script src="jsPDF/dist/jspdf.umd.min.js"></script>
+  <script src="logica.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
